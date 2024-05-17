@@ -1,15 +1,12 @@
 const fetchData = async (url = "", data = { url: "" }) => {
   try {
-    const response = await fetch(url, {
-      method: "POST",
-      credentials: "same-origin",
-      mode: "cors",
+    const response = await axios.post(url, data, {
+      withCredentials: true,
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
     });
-    return response.json();
+    return response.data;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw error;

@@ -3,6 +3,7 @@ projectData = [];
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const axios = require("axios");
 
 let API_KEY = "1bde10f68d1ae4cc4f4c9e50421dc5ee";
 let url = [];
@@ -21,14 +22,14 @@ app.post("/", async (req, res) => {
   url = req.body.url;
   const meaningUrl = `https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&url=${url}&lang=en`;
   try {
-    await fetch(meaningUrl, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    await axios
+      .get(meaningUrl, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
-        return response.json();
+        return response.data;
       })
       .then(async (data) => {
         res.send({
