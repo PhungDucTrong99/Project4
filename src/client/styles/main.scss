@@ -1,48 +1,81 @@
-.container {
-  width: 700px;
-  margin: 0 auto;
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+  display: grid;
+  grid-auto-rows: minmax(150px, auto);
+  height: 100vh;
+  color: #716ac3;
+  justify-content: center;
+  grid-gap: 1em;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  height: fit-content;
+}
+
+.container-content {
+  margin: 30px;
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: 1px solid #d3d2d2;
+    width: 700px;
   h1 {
     text-align: center;
+    
   }
   form {
-    .form-group {
-      margin-bottom: 0.2rem;
-      .form-control {
-        margin-top: 0.2rem;
-        display: block;
-        width: 100%;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-        height: 20px;
-      }
-    }
     button {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-      display: inline-block;
-      font-weight: 400;
-      text-align: center;
-      vertical-align: middle;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      border: 1px solid transparent;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      border-radius: 0.25rem;
-      cursor: pointer;
+      width: 100%;
+      /* height: 100px; */
+      color: #f0d43a;
+      font-size: 26px;
+      font-family: "Oswald", sans-serif;
+      border: none;
+      box-shadow: 2px 4px 5px #444;
     }
   }
-  .result {
-    margin-top: 1.5rem;
+}
+.holder {
+  // display: flex;
+  justify-content: center;
+}
+
+.entry {
+  margin-top: 100px;
+  border-top: 1px solid #d3d2d2;
+  padding-top: 20px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .container-content {
+      max-width: 100%;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-primary {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-control {
+      font-size: 14px;
   }
 }

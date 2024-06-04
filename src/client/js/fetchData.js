@@ -6,10 +6,11 @@ const fetchData = async (url = "", data = { url: "" }) => {
         "Content-Type": "application/json",
       },
     });
+    console.log("response", response);
     return response.data;
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
+  } catch (err) {
+    console.error("Error fetching data:", err);
+    throw err;
   }
 };
 

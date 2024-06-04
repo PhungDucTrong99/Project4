@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaluate a news article with Natural Language Processing</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app">
+    <div class="container-content">
       <h1>Evaluate a news article with Natural Language Processing</h1>
       <form action="">
-        <div class="form-group">
-          <label for="">URL</label>
-          <input type="text" name="url" id="url" class="form-control" />
+        <div class="mb-3">
+          <label for="" class="form-label">Enter URL</label>
+          <input type="text" class="form-control" name="url" id="url" placeholder="Enter url">
         </div>
-        <button class="btn" id="submit">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submit">Submit Form</button>
       </form>
-      <div class="result">
-        <strong>Form Results:</strong>
+      <div class="holder entry">
+        <div class="title">Result form</div>
         <div id="text"></div>
         <div id="agreement"></div>
         <div id="confidence"></div>
         <div id="subjectivity"></div>
         <div id="irony"></div>
       </div>
+      <!-- footer -->
+      <footer class="footer">Create by PhungDucTrong</footer>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
