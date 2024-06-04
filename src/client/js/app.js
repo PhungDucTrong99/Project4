@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+import "../styles/styles.scss";
 const { fetchData } = require("./fetchData");
 const { checkForUrl } = require("./checkForUrl");
 
@@ -25,8 +25,8 @@ async function handleSubmit(event) {
     } else {
       console.log("No data received");
     }
-  } catch (error) {
-    console.error("Error fetching data:", error.message);
+  } catch (err) {
+    console.error("Error fetching data:", err?.message);
     alert("Error fetching data. Please try again later.");
   }
 }

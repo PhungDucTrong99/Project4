@@ -7,7 +7,7 @@ const fetchData = async (url = "", data = { url: "" }) => {
       },
     });
     console.log("response", response);
-    return response.data;
+    return response?.data;
   } catch (err) {
     console.error("Error fetching data:", err);
     throw err;
